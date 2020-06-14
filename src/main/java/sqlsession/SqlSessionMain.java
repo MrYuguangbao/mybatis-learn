@@ -19,7 +19,12 @@ public class SqlSessionMain {
         SqlSession sqlSession = null;
         try {
             sqlSession = SqlSessionFactoryUtil.openSqlSession();
-            PeopleMapper mapper = sqlSession.getMapper(PeopleMapper.class);
+            List<People> selectAll = sqlSession.selectList("selectAll");
+            for (People people : selectAll) {
+                System.out.println(people);
+            }
+
+            //PeopleMapper mapper = sqlSession.getMapper(PeopleMapper.class);
 
             /*PeopleParam peopleParam = new PeopleParam();
             peopleParam.setId("1");
@@ -32,13 +37,13 @@ public class SqlSessionMain {
             sets.add("name5");
             String[] arrays = {"name7","name9"};*/
 
-            List<People> people = mapper.queryPeople("me",new RowBounds(0,3));
+            /*List<People> people = mapper.queryPeople("me",new RowBounds(0,3));
             for (People person : people) {
                 System.out.println(person.getId()+"\t"
                         +person.getIdentifyId()
                         +"\t"+person.getWeight()
                         +"\t"+person.getName());
-            }
+            }*/
             //sqlSession.commit();
         } finally {
             if (sqlSession != null) {

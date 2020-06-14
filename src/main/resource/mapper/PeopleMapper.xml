@@ -12,8 +12,11 @@
         <result property="weight" column="weight"/>
     </resultMap>
 
-
     <sql id="dbname">t_people</sql>
+
+    <select id="selectAll" resultType="people">
+        select * from <include refid="dbname" />
+    </select>
     
     <select id="queryPeople" parameterType="string" resultMap="queryPeopleMap">
         <bind name="pattern" value="'%'+param+'%'" />

@@ -16,6 +16,8 @@ import java.util.Set;
 public interface PeopleMapper {
     List<People> queryPeople(@Param("param") String param, RowBounds rowBounds);
 
+    List<People> selectAll();
+
     int insertPeople(People people);
 
     int updatePeople(PeopleParam peopleParam);
