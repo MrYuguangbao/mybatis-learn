@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="MySqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`" />
+        <property name="endingDelimiter" value="`" />
+
+        <commentGenerator>
+            <property name="suppressDate" value="true" />
+            <property name="addRemarkComments" value="true" />
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=UTC"
+                        userId="root"
+                        password="yuguangbao">
+        </jdbcConnection>
+       <!-- 配置生成的包名-->
+        <javaModelGenerator targetPackage="test.generator.model" targetProject="src\main\java">
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!-- 配置生成的mapper.xml文件的位置-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src\main\resource" />
+        <!-- 配置生成的mapper接口的位置,接口和xml文件分离-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="test.generator.mapper" targetProject="src\main\java" />
+        <!--使用通配符%，匹配数据库中所有的表-->
+        <table tableName="sys_user">
+            <generatedKey column="id" sqlStatement="MySql" />
+        </table>
+
+    </context>
+
+</generatorConfiguration>

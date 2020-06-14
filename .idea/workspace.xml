@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cda321e-9d94-4fb6-9413-95e8ba687d2c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mybatis-arist.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/generator/JavaGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resource/generator/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MybatisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MybatisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/PeopleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/PeopleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/People.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybatis/reflect/MyIntercpetor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybatis/reflect/MyIntercpetor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sqlsession/SqlSessionMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sqlsession/SqlSessionMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/PeopleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/PeopleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/MybatisController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MybatisController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PeopleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/PeopleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/People.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/People.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sqlsession/SqlSessionMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sqlsession/SqlSessionMain.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -51,6 +36,7 @@
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
@@ -73,14 +59,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\GitRepository\mybatis-arist\src\main\resource" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SqlSessionMain">
+  <component name="RunManager" selected="Application.JavaGenerator">
     <configuration name="BuildMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mybatis.builder.BuildMain" />
       <module name="mybatis-arist" />
@@ -88,6 +74,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="mybatis.builder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="generator.JavaGenerator" />
+      <module name="mybatis-arist" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="generator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,9 +164,11 @@
       <item itemvalue="Application.ReflectService" />
       <item itemvalue="Application.BuildMain" />
       <item itemvalue="Application.MybatisController" />
+      <item itemvalue="Application.JavaGenerator" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JavaGenerator" />
         <item itemvalue="Application.SqlSessionMain" />
         <item itemvalue="Application.MybatisController" />
         <item itemvalue="Application.BuildMain" />
@@ -196,7 +198,7 @@
       <workItem from="1591111045088" duration="4005000" />
       <workItem from="1591351266302" duration="1671000" />
       <workItem from="1592142987856" duration="350000" />
-      <workItem from="1592143396016" duration="2623000" />
+      <workItem from="1592143396016" duration="5365000" />
     </task>
     <servers />
   </component>
@@ -204,6 +206,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="485" y="212" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592146632757">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1592146632757" />
     <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1592145886702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -212,34 +218,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591352343973" />
-    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1592145736573">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1592148920250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592145736573" />
-    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1592145736573">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592148920250" />
+    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1592148920250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592145736573" />
-    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1592145736573">
+    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592148920250" />
+    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1592148920249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592145736573" />
-    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1592145736573">
+    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592148920249" />
+    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1592148920250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592145736573" />
-    <state x="349" y="146" key="IDE.errors.dialog" timestamp="1591351384849">
+    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592148920250" />
+    <state x="349" y="146" key="IDE.errors.dialog" timestamp="1592146380664">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="146" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1591351384849" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1592144699965">
+    <state x="349" y="146" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1592146380664" />
+    <state x="270" y="0" key="SettingsEditor" timestamp="1592147797993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592144699965" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1591351624872">
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592147797993" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592148597108">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1591351624872" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592148597108" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
