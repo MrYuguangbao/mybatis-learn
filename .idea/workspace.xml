@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cda321e-9d94-4fb6-9413-95e8ba687d2c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/generator/JavaGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resource/generator/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mapper/CountryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/SysPrivilege.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/SysRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/SysRolePrivilege.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/SysUserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resource/mapper/CountryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/CountryMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/SysUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/SysUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -59,14 +67,15 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GitRepository\mybatis-arist\src\main\resource\mapper" />
       <recent name="F:\GitRepository\mybatis-arist\src\main\resource" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JavaGenerator">
+  <component name="RunManager" selected="JUnit.CountryMapperTest.testSelectAll">
     <configuration name="BuildMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mybatis.builder.BuildMain" />
       <module name="mybatis-arist" />
@@ -109,20 +118,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="mybatis.reflect.ReflectService" />
-      <module name="mybatis-arist" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mybatis.reflect.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SqlSessionMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sqlsession.SqlSessionMain" />
       <module name="mybatis-arist" />
@@ -139,6 +134,17 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountryMapperTest.testSelectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-arist" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CountryMapperTest" />
+      <option name="METHOD_NAME" value="testSelectAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,18 +167,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.SqlSessionMain" />
-      <item itemvalue="Application.ReflectService" />
       <item itemvalue="Application.BuildMain" />
       <item itemvalue="Application.MybatisController" />
       <item itemvalue="Application.JavaGenerator" />
+      <item itemvalue="JUnit.CountryMapperTest.testSelectAll" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CountryMapperTest.testSelectAll" />
         <item itemvalue="Application.JavaGenerator" />
         <item itemvalue="Application.SqlSessionMain" />
         <item itemvalue="Application.MybatisController" />
         <item itemvalue="Application.BuildMain" />
-        <item itemvalue="Application.ReflectService" />
       </list>
     </recent_temporary>
   </component>
@@ -199,6 +205,12 @@
       <workItem from="1591351266302" duration="1671000" />
       <workItem from="1592142987856" duration="350000" />
       <workItem from="1592143396016" duration="5365000" />
+      <workItem from="1592148968395" duration="371000" />
+      <workItem from="1592203460437" duration="1342000" />
+      <workItem from="1592266376418" duration="151000" />
+      <workItem from="1593168844109" duration="1959000" />
+      <workItem from="1593216739070" duration="913000" />
+      <workItem from="1593218046779" duration="1454000" />
     </task>
     <servers />
   </component>
@@ -206,46 +218,46 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="485" y="212" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592146632757">
+    <state x="485" y="212" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593169526109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="485" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1592146632757" />
+    <state x="485" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1593169526109" />
     <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1592145886702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1592145886702" />
-    <state x="549" y="110" key="FileChooserDialogImpl" timestamp="1591352343973">
+    <state x="549" y="110" key="FileChooserDialogImpl" timestamp="1592266515500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591352343973" />
-    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1592148920250">
+    <state x="549" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592266515500" />
+    <state width="1493" height="356" key="GridCell.Tab.0.bottom" timestamp="1593180199129">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592148920250" />
-    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1592148920250">
+    <state width="1493" height="356" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593180199129" />
+    <state width="1493" height="356" key="GridCell.Tab.0.center" timestamp="1593180199128">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592148920250" />
-    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1592148920249">
+    <state width="1493" height="356" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593180199128" />
+    <state width="1493" height="356" key="GridCell.Tab.0.left" timestamp="1593180199128">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592148920249" />
-    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1592148920250">
+    <state width="1493" height="356" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593180199128" />
+    <state width="1493" height="356" key="GridCell.Tab.0.right" timestamp="1593180199129">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592148920250" />
+    <state width="1493" height="356" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593180199129" />
     <state x="349" y="146" key="IDE.errors.dialog" timestamp="1592146380664">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="146" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1592146380664" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1592147797993">
+    <state x="184" y="113" key="SettingsEditor" timestamp="1593218858817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592147797993" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592148597108">
+    <state x="184" y="113" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593218858817" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1593217809306">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592148597108" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593217809306" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
