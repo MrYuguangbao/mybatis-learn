@@ -2,6 +2,7 @@ package mapper;
 
 import model.People;
 import model.PeopleParam;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 
@@ -13,6 +14,7 @@ import java.util.Set;
  * @author admin
  * @date 2020/3/26 18:46
  */
+@Mapper
 public interface PeopleMapper {
     List<People> queryPeople(@Param("param") String param, RowBounds rowBounds);
 
