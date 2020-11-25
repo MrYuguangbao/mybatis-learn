@@ -32,7 +32,7 @@ public class CountryMapperTest {
         }
     }
 
-    @Test
+    /*@Test
     public void testSelectAll(){
         SqlSession sqlSession = factory.openSession();
         List<Country> list = sqlSession.selectList("selectAllCountry");
@@ -41,6 +41,6 @@ public class CountryMapperTest {
                 +"\t"+ele.getCountryCode()
                 +"\t"+ele.getCreateTime()
                 +"\t"+ele.getUpdateTime()));
-    }
+    }*/
 
 }

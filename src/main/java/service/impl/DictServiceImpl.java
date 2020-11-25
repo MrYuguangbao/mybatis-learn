@@ -2,11 +2,13 @@ package service.impl;
 
 import mapper.DictMapper;
 import model.SysDict;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import service.DictService;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @Author: admin
@@ -23,6 +25,10 @@ public class DictServiceImpl implements DictService {
 
     @Override
     public List<SysDict> findBySysDict(SysDict sysDict, Integer offset, Integer limit) {
-        return null;
+        RowBounds rowBounds = RowBounds.DEFAULT;
+        if (Objects.nonNull(offset) && Objects.nonNull(limit)) {
+            rowBounds = new RowBounds(offset, limit);
+        }
+        return mapper.selectBySysDict(sysDict, rowBounds);
     }
 }

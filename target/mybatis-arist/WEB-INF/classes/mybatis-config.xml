@@ -30,6 +30,7 @@
     <mappers>
         <mapper resource="mapper/PeopleMapper.xml" />
         <mapper resource="mapper/CountryMapper.xml" />
+        <mapper resource="mapper/DictMapper.xml" />
     </mappers>
     
 
